@@ -1,0 +1,58 @@
+.contact-card {
+  padding: clamp(35px, 7vw, 72px);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--card);
+  text-align: center;
+}
+
+.contact-card .eyebrow {
+  margin-bottom: 15px;
+}
+
+.contact-card h2 {
+  margin: 0;
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  letter-spacing: -0.045em;
+  line-height: 1.1;
+}
+
+.contact-card > p:not(.eyebrow) {
+  max-width: 540px;
+  margin: 17px auto 29px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  align-items: center;
+}
+
+.contact-detail {
+  color: var(--muted);
+  font-size: 0.72rem;
+  text-decoration: none;
+}
+
+.contact-detail:hover {
+  color: var(--accent);
+}
+
+@media (min-width: 801px) {
+  .contact-card {
+    padding: 46px 56px;
+  }
+
+  .contact-card h2 {
+    font-size: 2.1rem;
+  }
+
+  .contact-card > p:not(.eyebrow) {
+    margin: 17px auto 29px;
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+}

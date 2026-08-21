@@ -1,0 +1,32 @@
+<section id="about" class="section container">
+  <div class="section-heading">
+    <p class="eyebrow">01 / About me</p>
+    <h2>Building useful things with care.</h2>
+  </div>
+
+  <article class="about-card">
+    <div class="profile-wrap">
+      @if (imageAvailable) {
+        <img
+          [src]="profileImage"
+          alt="Harold Nikko G. Salanguit"
+          (error)="hideBrokenImage()"
+        >
+      }
+      <span aria-hidden="true">HNS</span>
+    </div>
+
+    <div class="about-copy">
+      <h3>Harold Nikko G. Salanguit</h3>
+      <p class="role">Software Engineer</p>
+      <p> I’m a software engineer with internship experience at Nexus Elixir Solutions Corp., where I gained hands-on experience in software development, user interface implementation, backend integration, and working with modern web technologies. I enjoy turning ideas into practical, user-focused digital solutions while continuously expanding my skills across different technologies and development tools. </p>
+    </div>
+
+    <div class="stats" aria-label="Portfolio highlights">
+      <div><strong>04</strong><span>Projects</span></div>
+      <div><strong>16</strong><span>Technologies</span></div>
+      <div><strong>01</strong><span>Experience</span></div>
+      <div><strong>∞</strong><span>Learning</span></div>
+    </div>
+  </article>
+</section>

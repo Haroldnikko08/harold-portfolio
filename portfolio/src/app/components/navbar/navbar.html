@@ -1,0 +1,28 @@
+<header class="site-header">
+  <nav class="nav container" aria-label="Primary navigation">
+    <a class="brand" href="#home" (click)="closeMenu()">
+      <img src="LOGO-NAME.png" alt="Harold Nikko G. Salanguit logo">
+    </a>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      (click)="toggleMenu()"
+      [attr.aria-expanded]="menuOpen"
+      aria-label="Toggle navigation"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="nav-links" [class.open]="menuOpen">
+      <a href="#home" (click)="closeMenu()">Home</a>
+      <a href="#about" (click)="closeMenu()">About</a>
+      <a href="#skills" (click)="closeMenu()">Skills</a>
+      <a href="#projects" (click)="closeMenu()">Projects</a>
+      <a href="#experience" (click)="closeMenu()">Experience</a>
+      <a href="#contact" (click)="closeMenu()">Contact</a>
+    </div>
+  </nav>
+</header>

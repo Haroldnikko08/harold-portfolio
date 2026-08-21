@@ -1,0 +1,60 @@
+<section id="projects" class="section container">
+  <div class="section-heading">
+    <p class="eyebrow">03 / Featured projects</p>
+    <h2>A selection of my work.</h2>
+  </div>
+
+  <div class="projects-grid">
+    @for (project of projects; track project.title) {
+      <article
+        class="project-card"
+        [class.project-card--featured]="project.featured"
+      >
+
+        <div class="project-image">
+          @if (project.image) {
+            <img
+              [src]="project.image"
+              [alt]="project.title + ' logo'"
+            >
+          } @else if (project.logoText) {
+            <span class="project-logo-text">
+              {{ project.logoText }}
+            </span>
+          }
+        </div>
+
+        <div class="project-content">
+          <h3>{{ project.title }}</h3>
+
+          <p>{{ project.description }}</p>
+
+          <div class="badges" aria-label="Project technologies">
+            @for (technology of project.technologies; track technology) {
+              <span>{{ technology }}</span>
+            }
+          </div>
+
+          <div class="project-links">
+            @if (project.github) {
+              <a
+                [href]="project.github"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {{ project.githubLabel || 'GitHub' }} ↗
+              </a>
+            }
+
+            @if (project.private) {
+              <span class="private-project">
+                Private Project
+              </span>
+            }
+          </div>
+        </div>
+
+      </article>
+    }
+  </div>
+</section>

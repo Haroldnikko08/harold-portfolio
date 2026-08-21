@@ -1,0 +1,128 @@
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.project-card {
+  overflow: hidden;
+  min-width: 0;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--card);
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(40, 127, 255, 0.5);
+}
+
+/* Project logo area */
+.project-image {
+  display: grid;
+  position: relative;
+  height: 150px;
+  place-items: center;
+  overflow: hidden;
+  background: #0b1320;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  object-fit: contain;
+}
+
+/* HRS text logo */
+.project-logo-text {
+  color: var(--text);
+  font-size: 2.8rem;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+}
+
+/* Project content */
+.project-content {
+  padding: 18px;
+}
+
+.project-content h3 {
+  margin: 0 0 8px;
+  font-size: 0.96rem;
+}
+
+.project-content > p {
+  min-height: 75px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.75rem;
+  line-height: 1.6;
+}
+
+/* Technology badges */
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 16px;
+}
+
+.badges span {
+  padding: 5px 8px;
+  border-radius: 4px;
+  background: rgba(40, 127, 255, 0.12);
+  color: #a8c6ff;
+  font-size: 0.66rem;
+  font-weight: 600;
+}
+
+/* Project links */
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  min-height: 28px;
+  margin-top: 18px;
+}
+
+.project-links a {
+  color: var(--text);
+  font-size: 0.66rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.project-links a:hover {
+  color: var(--accent);
+}
+
+.private-project {
+  color: var(--muted);
+  font-size: 0.66rem;
+  font-weight: 600;
+}
+
+/* Tablet */
+@media (max-width: 1100px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-image {
+    height: 180px;
+  }
+
+  .project-content {
+    padding: 18px;
+  }
+}
