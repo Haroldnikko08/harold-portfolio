@@ -26,7 +26,7 @@ export class ProjectsComponent {
         'A web-based platform designed to digitize and streamline the teacher promotion and position reclassification process for DepEd through digital requirements submission, online evaluation, automated scoring, applicant ranking, and transparent access to results.',
       image: '/Elevated%20Logo.png',
       technologies: ['Laravel', 'PHP', 'JavaScript', 'Bootstrap', 'MySQL'],
-      github: 'YOUR_ELEVATEED_GITHUB_LINK',
+      github: 'https://github.com/Haroldnikko08/ElevateED',
       githubLabel: 'GitHub',
     },
     {
@@ -55,7 +55,7 @@ export class ProjectsComponent {
         'An RFID-integrated veterinary management system designed to identify and track pets while maintaining centralized pet records and information.',
       image: '/petcare.png',
       technologies: ['PHP', 'JavaScript', 'HTML', 'MySQL', 'RFID'],
-      github: 'YOUR_PETCARE_GITHUB_LINK',
+      github: 'https://github.com/Haroldnikko08/Petcare',
       githubLabel: 'GitHub',
     },
   ];
