@@ -6,7 +6,6 @@ import { ExperienceComponent } from './components/experience/experience';
 import { FooterComponent } from './components/footer/footer';
 import { HeroComponent } from './components/hero/hero';
 import { NavbarComponent } from './components/navbar/navbar';
-import { OfficeSkillsComponent } from './components/office-skills/office-skills';
 import { ProjectsComponent } from './components/projects/projects';
 import { SkillsComponent } from './components/skills/skills';
 
@@ -17,7 +16,6 @@ import { SkillsComponent } from './components/skills/skills';
     HeroComponent,
     AboutComponent,
     SkillsComponent,
-    OfficeSkillsComponent,
     ProjectsComponent,
     ExperienceComponent,
     ContactComponent,
