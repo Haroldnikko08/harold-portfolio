@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ThemeService } from '../../services/theme.service';
 
 @Component({
   selector: 'app-navbar',
@@ -6,6 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './navbar.scss',
 })
 export class NavbarComponent {
+  protected readonly themeService = inject(ThemeService);
   protected menuOpen = false;
 
   protected toggleMenu(): void {

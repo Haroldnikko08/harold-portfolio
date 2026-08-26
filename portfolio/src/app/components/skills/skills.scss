@@ -1,6 +1,6 @@
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 12px;
 }
 
@@ -13,6 +13,7 @@
   border: 1px solid var(--border);
   border-radius: 10px;
   background: var(--card);
+  min-width: 0;
 }
 
 .skill-mark {
@@ -22,8 +23,8 @@
   flex: none;
   place-items: center;
   border-radius: 8px;
-  background: rgba(40, 127, 255, 0.13);
-  color: #8eb9ff;
+  background: var(--accent-soft);
+  color: var(--accent);
   font-size: 0.82rem;
   font-weight: 800;
 }
@@ -45,51 +46,8 @@
   font-size: 0.72rem;
 }
 
-@media (max-width: 800px) {
-  .skills-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
 @media (max-width: 620px) {
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
-
   .skill-card {
     min-height: 76px;
-  }
-}
-
-@media (min-width: 801px) {
-  .skills-grid {
-    grid-template-columns: repeat(7, 1fr);
-    gap: 12px;
-  }
-
-  .skill-card {
-    min-height: 78px;
-    flex-direction: column;
-    gap: 7px;
-    justify-content: center;
-    padding: 8px;
-    border: 0;
-    background: transparent;
-  }
-
-  .skill-mark {
-    width: 38px;
-    height: 38px;
-    border-radius: 7px;
-  }
-
-  .skill-card h3 {
-    margin: 0;
-    font-size: 0.62rem;
-    text-align: center;
-  }
-
-  .skill-card p {
-    display: none;
   }
 }

@@ -3,7 +3,7 @@
   top: 0;
   z-index: 10;
   border-bottom: 1px solid var(--border);
-  background: rgba(7, 11, 20, 0.9);
+  background: var(--header-background);
   backdrop-filter: blur(10px);
 }
 
@@ -15,6 +15,7 @@
 }
 
 .brand {
+  gap: 9px;
   display: inline-flex;
   align-items: center;
   color: var(--text);
@@ -25,16 +26,63 @@
 
 .brand img {
   display: block;
-  width: auto;
-  max-width: 185px;
+  width: 34px;
+  max-width: 34px;
   height: 34px;
   object-fit: contain;
+}
+
+.brand-name {
+  color: var(--logo-name-color);
+  font-size: 0.9rem;
+  letter-spacing: -0.02em;
+  transition: color 0.2s ease;
+  white-space: nowrap;
 }
 
 .nav-links {
   display: flex;
   gap: 25px;
   align-items: center;
+  min-width: 0;
+}
+
+.nav-controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  min-height: 32px;
+  gap: 6px;
+  align-items: center;
+  padding: 0 9px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface-secondary);
+  color: var(--text);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.66rem;
+  font-weight: 700;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.theme-toggle svg {
+  width: 14px;
+  height: 14px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
 }
 
 .nav-links a {
@@ -49,6 +97,8 @@
 
 .menu-toggle {
   display: none;
+  min-width: 44px;
+  min-height: 44px;
   padding: 8px;
   border: 0;
   background: none;
@@ -90,21 +140,58 @@
   }
 }
 
+@media (max-width: 420px) {
+  .brand img {
+    width: 30px;
+    max-width: 30px;
+    height: 30px;
+  }
+
+  .brand {
+    gap: 6px;
+  }
+
+  .brand-name {
+    max-width: 142px;
+    overflow: hidden;
+    font-size: 0.73rem;
+    text-overflow: ellipsis;
+  }
+
+  .theme-toggle {
+    width: 44px;
+    min-height: 44px;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .theme-toggle__label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+}
+
 @media (min-width: 621px) {
   .nav {
     height: 54px;
   }
 
   .brand img {
-    max-width: 190px;
+    width: 34px;
+    max-width: 34px;
     height: 34px;
   }
 
   .nav-links {
+    margin-left: auto;
     gap: 28px;
   }
 
   .nav-links a {
-    font-size: 0.65rem;
+    font-size: 0.8rem;
   }
 }

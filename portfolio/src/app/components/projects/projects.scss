@@ -13,9 +13,14 @@
   transition: transform 0.2s, border-color 0.2s;
 }
 
+.project-content,
+.project-links {
+  min-width: 0;
+}
+
 .project-card:hover {
   transform: translateY(-3px);
-  border-color: rgba(40, 127, 255, 0.5);
+  border-color: var(--accent-border);
 }
 
 /* Project logo area */
@@ -25,7 +30,7 @@
   height: 150px;
   place-items: center;
   overflow: hidden;
-  background: #0b1320;
+  background: var(--surface-secondary);
 }
 
 .project-image img {
@@ -59,6 +64,7 @@
   color: var(--muted);
   font-size: 0.75rem;
   line-height: 1.6;
+  overflow-wrap: anywhere;
 }
 
 /* Technology badges */
@@ -72,8 +78,8 @@
 .badges span {
   padding: 5px 8px;
   border-radius: 4px;
-  background: rgba(40, 127, 255, 0.12);
-  color: #a8c6ff;
+  background: var(--accent-soft);
+  color: var(--accent);
   font-size: 0.66rem;
   font-weight: 600;
 }
@@ -93,6 +99,7 @@
   font-size: 0.66rem;
   font-weight: 700;
   text-decoration: none;
+  overflow-wrap: anywhere;
 }
 
 .project-links a:hover {
